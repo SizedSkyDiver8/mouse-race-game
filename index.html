@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Race Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <div class="timer">00:00</div>
+    <div id="container">
+      <button id="startButton">Start Game</button>
+      <div id="instructions">
+        <button id="toggleInstructions">Instructions</button>
+        <div id="instructionContent" class="collapsed"></div>
+      </div>
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <script type="module" src="dist/index.js"></script>
+  </body>
+</html>

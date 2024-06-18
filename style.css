@@ -1,0 +1,257 @@
+html,
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 99%;
+}
+body {
+  background: linear-gradient(335deg, #6168a7, #b57849, #6168a7, #b57849);
+}
+
+#container {
+  text-align: center;
+  margin-top: 50px;
+  position: relative; 
+}
+
+#startButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(126, 71, 244);
+  font-size: 25px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#instructions {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+#toggleInstructions {
+  display: block;
+  margin-top: 20px;
+}
+
+#instructionContent {
+  display: none;
+  font-size: 1.2em; 
+  padding: 10px;
+  border: 1px solid #000;
+  background-color: #f9f9f9;
+}
+
+#instructionContent.expanded {
+  display: block;
+  font-family: cursive;
+}
+
+#gameCanvas {
+  border: 5px solid black;
+  display: block;
+  margin: 10px auto;
+  background-color: #b98ec7a9;
+}
+
+.timer {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4caf50;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.timer.running {
+  background-color: #ffeb3b;
+}
+
+.timer.paused {
+  background-color: #f44336;
+}
+
+.timer.won {
+  background-color: #4caf50;
+}
+.timer:focus {
+  outline: none;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #81c784;
+}
+
+#gameOverDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  background-color: white;
+  border: 2px solid black;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  font-family: Come;
+  font-size: 24px;
+  text-align: center;
+}
+
+#gameOverDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  background-color: white;
+  border: 2px solid black;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  text-align: center;
+}
+
+#gameOverDiv.game-over {
+  background-color: #ff6347;
+  color: #fff;
+}
+
+#gameOverDiv.not-game-over {
+  background-color: #4682b4;
+  color: #fff;
+}
+
+#topScoresDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border: 2px solid black;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  background: darksalmon;
+}
+
+#topScoresDiv button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+#topScoresDiv button:hover {
+  background-color: #0056b3;
+}
+
+#topScoresDiv h2 {
+  font-family: sans-serif;
+}
+
+.congParagraph {
+  font-family: "Happy Birthday", sans-serif;
+  font-size: 75px;
+  margin: unset;
+}
+
+.congText {
+  margin-top: 0;
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+.gameOverText {
+  font-family: "Spider Demo Regular";
+  font-size: 100px;
+}
+
+.inputName {
+  margin-right: 10px;
+  height: 45px;
+  font-size: 20px;
+}
+#instructionContent {
+  font-family: "cursive";
+  text-align: left;
+}
+#instructionContent h3 {
+  text-align: center !important;
+}
+
+@font-face {
+  font-family: "Spider Demo Regular";
+  src: local("Spider demo רגיל"),
+    url("path/to/SpiderDemo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Happy Birthday";
+  src: url("fonts/HappyBirthdayRegular.ttf") format("truetype"); 
+}
+
+@font-face {
+  font-family: "Techno Race";
+  src: url("fonts/TechnoRaceItalic.otf") format("opentype"); 
+}
+
+@font-face {
+  font-family: "Ranger Eastwood";
+  src: url("fonts/RangerEastwoodRegular.ttf") format("truetype"); 
+}
