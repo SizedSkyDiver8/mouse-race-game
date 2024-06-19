@@ -62,8 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     elements = [];
     shapeCount = 0;
 
-    for (let i = 0; i < 2; i++) {
-      //CHANGE TO 15
+    for (let i = 0; i < 20; i++) {
       const x = getRandomInt(0, canvas.width);
       const y = getRandomInt(0, canvas.height);
       const maxWidth = Math.min(canvas.width - x, 50);
